@@ -1,0 +1,64 @@
+/*  apply style to Add Todo section */
+@import "./../../variables";
+@import "./../../mixin";
+
+.title {
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  display: inline-block;
+  width: 80px;
+  height: 18px;
+  padding: 3px;
+  border: 1px solid blue;
+  background-color: black;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  background-color: #126180;
+  border: none;
+  color: white;
+  padding: $constant-padding calc($constant-padding * 3);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 20px;
+  /*  apply style to descendant button */
+  /* & parent , interpolation everything before it is needed so wrap it */
+  &:hover {
+    background-color: #389bc2;
+    cursor: pointer;
+  }
+}
+
+/*  extend feature from .button and add new color */
+input[type="submit"] {
+  @extend .button;
+  background-color: $boarder-color;
+}
+
+.add-todo-list {
+  border: 1px solid $boarder-color;
+  margin: 0px 20px;
+  background-color: white;
+}
+
+fieldset {
+  display: flex;
+  padding: $constant-padding calc($constant-padding * 2);
+  background: none;
+  color: inherit;
+  border: none;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.title-form {
+  padding-right: $constant-padding;
+}

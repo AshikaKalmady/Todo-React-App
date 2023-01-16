@@ -1,0 +1,11 @@
+/*  apply style to list created from java script */
+@import "./variables.scss";
+@import "./mixin.scss";
+
+ul {
+  padding: 0px;
+}
+
+.todo-list {
+  margin: 20px;
+}

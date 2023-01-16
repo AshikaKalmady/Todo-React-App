@@ -1,0 +1,87 @@
+@import "./../../mixin";
+@import "./../../variables";
+
+.showInfo {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-right: 30px;
+  outline: none;
+  box-shadow: none;
+  float: right;
+  border-width: 2px;
+  border-radius: 3px;
+  border-style: solid;
+  color: white;
+  border-color: white;
+  background-color: black;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.todoCompletedWrapper {
+  text-decoration: line-through;
+  width: 100%;
+}
+
+.todoWrapper {
+  text-decoration: none;
+  width: 100%;
+}
+
+ul {
+  padding: 0px;
+}
+
+.todo-list {
+  margin: 20px;
+}
+
+ul {
+  padding: 0px;
+}
+
+.todo {
+  background-color: #bcd4e6;
+  padding: $constant-padding;
+  margin-bottom: 20px;
+  border: 1px solid $boarder-color;
+  list-style-type: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.span-left {
+  @include alignLeftRight(left, 20px, $font-family);
+}
+
+.span-right {
+  float: right;
+  @include alignLeftRight(right, 18px, $font-family);
+  color: rgb(10, 111, 174);
+}
+
+.checkmark {
+  padding-right: $constant-padding;
+  margin-top: 6px;
+  outline: none;
+  box-shadow: none;
+  float: right;
+}
+
+input[type="checkbox"] {
+  transform: scale(2);
+}
+
+.todo-desc-display {
+  display: block;
+}
+
+.todo-desc-hide {
+  display: none;
+}
+.todo-desc {
+  @include flexBox($constant-padding - 5);
+  margin-bottom: 10px;
+  padding: 8px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  font-family: Arial, Helvetica, sans-serif;
+}

@@ -1,0 +1,16 @@
+/* set the padding and margin , dont set margin if is null  */
+@import "variables";
+
+@mixin flexBox($padding, $margin: null) {
+  padding: $padding;
+  @if not($margin) {
+    margin: $margin;
+  }
+}
+
+/*  align text left or right based on parameter passed */
+@mixin alignLeftRight($position, $fontsize, $fontfamily) {
+  text-align: $position;
+  font-size: $fontsize;
+  font-family: $fontfamily;
+} ;
